@@ -3,7 +3,13 @@ kind: Ingress
 metadata:
   name: ingress-nginx
   namespace: development
+  annotations:
+    cert-manager.io/issuer: letsencrypt-nginx
 spec: 
+  tls:
+    - hosts:
+      - kube.jdnielss.my.id
+      secretName: letsencrypt-nginx
   rules:
     - host: kube.jdnielss.my.id
       http:
