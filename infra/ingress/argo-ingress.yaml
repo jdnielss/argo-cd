@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-argo
+  namespace: development
+  annotations:
+    cert-manager.io/issuer: letsencrypt-argo
+spec: 
+  tls:
+    - hosts:
+      - argo.jdnielss.my.id
+      secretName: letsencrypt-argo
+  rules:
+    - host: argo.jdnielss.my.id
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-service # samain di Serive app
+                port:
+                  number: 80
+  ingressClassName: nginx
