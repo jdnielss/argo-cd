@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -11,6 +12,8 @@ spec:
     metadata:
       labels:
         app: nginx
+        version: 1
+        istio: monitor
     spec:
       containers:
       - name: nginx

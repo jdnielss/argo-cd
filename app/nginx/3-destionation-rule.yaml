@@ -1,0 +1,13 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestionationRule
+metadata:
+  name: nginx
+  namespace: development
+spec:
+  host: nginx
+  subsets:
+    - name: v1
+      labels:
+        app: nginx
+        version: v1
