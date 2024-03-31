@@ -25,6 +25,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: argocd-service # samain di Serive app
+                name: argocd-server # samain di Serive app
                 port:
-                  name: https
+                  name: http
