@@ -9,4 +9,3 @@ spec:
   ports:
   - name: argo-cd
     port:  80
-    targetPort:  8080
