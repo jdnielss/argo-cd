@@ -12,7 +12,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: nginx-service
+                name: nginx-service # samain di Serive app
                 port:
                   number: 80
   ingressClassName: nginx
