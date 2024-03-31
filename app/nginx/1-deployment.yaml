@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 1   # Number of Nginx pods to run
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -12,11 +12,11 @@ spec:
     metadata:
       labels:
         app: nginx
-        version: 1
+        version: v1
         istio: monitor
     spec:
       containers:
       - name: nginx
-        image: nginx:latest   # Nginx Docker image
+        image: nginx:latest   
         ports:
-        - containerPort: 80   # Port to expose on the Nginx container
+        - containerPort: 80
