@@ -21,8 +21,8 @@ spec:
     - host: argo.jdnielss.my.id
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /api/dex/callback
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: argocd-server # samain di Serive app
