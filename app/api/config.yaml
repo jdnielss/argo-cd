@@ -4,4 +4,4 @@ metadata:
   name: go-environment
   namespace: development
 data:
-  PORT: "8080"
+  PORT: "80"
