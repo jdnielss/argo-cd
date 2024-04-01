@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-grafana
+  namespace: development
+spec:
+  acme:
+    email: jdnielss@mailinator.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-grafana-private-key
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
