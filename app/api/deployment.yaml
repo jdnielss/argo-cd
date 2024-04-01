@@ -20,10 +20,10 @@ spec:
               memory: "128Mi"
               cpu: "50m"
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           livenessProbe:
             httpGet:
               path: /health
-              port: 8080
+              port: 80
             initialDelaySeconds: 3
             periodSeconds: 10
