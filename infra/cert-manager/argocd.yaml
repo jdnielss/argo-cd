@@ -1,14 +1,14 @@
+---
 apiVersion: cert-manager.io/v1
-kind: Issuer
+kind: ClusterIssuer
 metadata:
-  name: letsencrypt-argo
-  namespace: argocd
+  name: argocd-issuer-argocd-letsencrypt
 spec:
   acme:
     email: jdnielss@mailinator.com
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: letsencrypt-argo-private-key
+      name: argocd-letsencrypt-private-key
     solvers:
       - http01:
           ingress:
