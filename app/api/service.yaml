@@ -9,4 +9,4 @@ spec:
   ports:
     - name: go-api-service
       port: 80
-      targetPort: 80
+      targetPort: 8080
