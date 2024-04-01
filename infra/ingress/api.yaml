@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  namespace: development
+  annotations:
+    cert-manager.io/issuer: letsencrypt-nginx
+spec: 
+  tls:
+    - hosts:
+      - api.jdnielss.my.id
+      secretName: letsencrypt-nginx
+  rules:
+    - host: api.jdnielss.my.id
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: go-api-service # samain di Serive app
+                port:
+                  number: 8080
+  ingressClassName: nginx

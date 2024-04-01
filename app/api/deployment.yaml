@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-api-service
+  namespace: development
+spec:
+  selector:
+    matchLabels:
+      app: go-api-service
+  template:
+    metadata:
+      labels:
+        app: go-api-service
+    spec:
+      containers:
+        - name: go-api-service
+          image: docker.io/jdnielss/go-api-service:1.6.1
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "50m"
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 10
