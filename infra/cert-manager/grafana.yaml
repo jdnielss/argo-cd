@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt-grafana
-  namespace: development
+  namespace: kube-prometheus-stack
 spec:
   acme:
     email: jdnielss@mailinator.com
