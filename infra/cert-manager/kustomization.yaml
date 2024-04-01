@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - argocd.yaml
   - nginx.yaml
+  - api.yaml
