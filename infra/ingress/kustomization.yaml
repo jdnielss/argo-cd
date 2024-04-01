@@ -4,3 +4,4 @@ resources:
   - api.yaml
   - nginx.yaml
   - argocd.yaml
+  - grafana.yaml
