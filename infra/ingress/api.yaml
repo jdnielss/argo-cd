@@ -4,12 +4,12 @@ metadata:
   name: ingress-nginx
   namespace: development
   annotations:
-    cert-manager.io/issuer: letsencrypt-nginx
+    cert-manager.io/issuer: letsencrypt-api
 spec: 
   tls:
     - hosts:
       - api.jdnielss.my.id
-      secretName: letsencrypt-nginx
+      secretName: letsencrypt-api
   rules:
     - host: api.jdnielss.my.id
       http:
