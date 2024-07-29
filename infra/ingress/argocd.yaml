@@ -45,5 +45,5 @@ spec:
                   name: https
   tls:
     - hosts:
-        - dev.route.enigmacamp.com
+        - dev.route.kube.enigmacamp.com
       secretName: argocd-secret
