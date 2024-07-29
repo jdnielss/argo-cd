@@ -54,4 +54,4 @@ metadata:
   name: argocd-cm
   namespace: argocd
 data:
-  server.basepath: "/core/argo"
+  basehref: "/core/argo"
