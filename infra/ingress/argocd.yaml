@@ -47,3 +47,11 @@ spec:
     - hosts:
         - dev.route.kube.enigmacamp.com
       secretName: argocd-secret
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+data:
+  url: "https://dev.route.kube.enigmacamp.com/core/argo"
