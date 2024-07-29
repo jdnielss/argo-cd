@@ -33,10 +33,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: argo.jdnielss.my.id
+    - host: dev.route.kube.enigmacamp.com
       http:
         paths:
-          - path: /
+          - path: /core/argo
             pathType: Prefix
             backend:
               service:
@@ -45,5 +45,5 @@ spec:
                   name: https
   tls:
     - hosts:
-        - argo.jdnielss.my.id
+        - dev.route.enigmacamp.com
       secretName: argocd-secret

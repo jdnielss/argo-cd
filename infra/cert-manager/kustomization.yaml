@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - argocd.yaml
-  - nginx.yaml
-  - api.yaml
-  - grafana.yaml
+#  - nginx.yaml
+#  - api.yaml
+#  - grafana.yaml
