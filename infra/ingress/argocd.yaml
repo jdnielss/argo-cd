@@ -54,4 +54,4 @@ metadata:
   name: argocd-cm
   namespace: argocd
 data:
-  url: "https://dev.route.kube.enigmacamp.com/core/argo"
+  server.basepath: "/core/argo"
