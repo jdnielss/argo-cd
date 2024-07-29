@@ -36,7 +36,7 @@ spec:
     - host: dev.route.kube.enigmacamp.com
       http:
         paths:
-          - path: /core/argo
+          - path: /argo-cd
             pathType: Prefix
             backend:
               service:
@@ -54,4 +54,4 @@ metadata:
   name: argocd-cm
   namespace: argocd
 data:
-  basehref: "/core/argo"
+  server.basehref: "/argo-cd"
