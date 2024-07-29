@@ -8,13 +8,13 @@ metadata:
 spec: 
   tls:
     - hosts:
-      - api.jdnielss.my.id
+      - dev.route.kube.enigmacamp.com
       secretName: letsencrypt-api
   rules:
-    - host: api.jdnielss.my.id
+    - host: dev.route.kube.enigmacamp.com
       http:
         paths:
-          - path: /
+          - path: /api/golang
             pathType: Prefix
             backend:
               service:
